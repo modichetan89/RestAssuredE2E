@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-02-01T12:00:24.157Z",
+        "start_timestamp": "2021-02-02T09:26:20.438Z",
         "line": 3,
         "name": "Verify if place is being successfully added using AddPlaceAPI",
         "description": "",
@@ -13,50 +13,98 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 2920000000,
+              "status": "passed"
             },
             "line": 5,
             "name": "Add place payload",
-            "match": {},
+            "match": {
+              "location": "stepDefinitions.StepDefinition.add_place_payload()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 4282000000,
+              "status": "passed"
             },
             "line": 6,
             "name": "user calls \"addPlaceAPI\" with \"POST\" http request",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"addPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 4000000,
+              "status": "passed"
             },
             "line": 7,
             "name": "the API call is success with status code \"200\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_is_success_with_status_code(java.lang.String)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 1357000000,
+              "status": "passed"
             },
             "line": 8,
             "name": "\"status\" in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 25000000,
+              "status": "passed"
             },
             "line": 9,
             "name": "\"scope\" in response body is \"APP\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
             "keyword": "And "
           }
         ]

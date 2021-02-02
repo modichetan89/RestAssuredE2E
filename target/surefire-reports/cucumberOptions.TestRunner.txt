@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: cucumberOptions.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.252 sec <<< FAILURE!
+Verify if place is being successfully added using AddPlaceAPI(Validating Place API's)  Time elapsed: 0.485 sec  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: The step "Add place payload" is undefined. You can implement it using the snippet(s) below:
+
+@Given("Add place payload")
+public void add_place_payload() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("user calls {string} with {string} http request")
+public void user_calls_with_http_request(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the API call is success with status code {string}")
+public void the_api_call_is_success_with_status_code(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} in response body is {string}")
+public void in_response_body_is(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
