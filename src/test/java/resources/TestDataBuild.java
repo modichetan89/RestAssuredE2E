@@ -28,4 +28,33 @@ public class TestDataBuild {
 
 		return ap;
 	}
+	
+	public AddPlace addPlacePayloadDataDriven(String Add, String Lang, String Name) {
+		AddPlace ap = new AddPlace();
+		ap.setAccuracy(50);
+		ap.setAddress(Add);
+		ap.setLanguage(Lang);
+		ap.setName(Name);
+		ap.setPhone_number("(+91) 983 893 3937");
+		ap.setWebsite("http://google.com");
+		
+		List<String> myList = new ArrayList<String>();
+		myList.add("shoe park");
+		myList.add("shop");
+		ap.setTypes(myList);
+		
+		Location loc = new Location();
+		loc.setLat("-38.383494");
+		loc.setLng("33.427362");
+		ap.setLocation(loc);
+
+		return ap;
+	}
+	
+	public String deletePlacePayload(String place_id) {
+		return "{\r\n" + 
+				"    \"place_id\":\""+place_id+"\"\r\n" + 
+				"}";
+		
+	}
 }
