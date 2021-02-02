@@ -1,5 +1,6 @@
 Feature: Validating Place API's
 
+@Sanity @AddPlace
 Scenario: Verify if place is being successfully added using AddPlaceAPI
 Given Add place payload
 When user calls "AddPlaceAPI" with "POST" http request
@@ -7,6 +8,7 @@ Then the API call is success with status code "200"
 And "status" in response body is "OK"
 And "scope" in response body is "APP"
 
+@Sanity @Regression @AddPlace
 Scenario Outline: Verify AddPlaceAPI with multiple data
 Given Add place payload with "<Address>", "<Language>", "<Name>"
 When user calls "AddPlaceAPI" with "POST" http request
@@ -19,6 +21,7 @@ Examples:
 |AA|BB|CC|
 |DD|EE|FF|
 
+@Sanity @Regression @DeletePlace
 Scenario: Verify if place is being successfully deleted using DeletePlaceAPI
 Given Delete place payload
 When user calls "DeletePlaceAPI" with "DELETE" http request
